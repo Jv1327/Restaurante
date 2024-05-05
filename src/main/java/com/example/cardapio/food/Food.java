@@ -1,13 +1,11 @@
 package com.example.cardapio.food;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Table(name = "foods")
 @Entity(name = "foods")
 public class Food {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String image;
